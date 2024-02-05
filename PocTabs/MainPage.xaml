@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<TabbedPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+            xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+            xmlns:local="clr-namespace:PocTabs"
+            x:DataType="local:MainViewModel"
+            x:Class="PocTabs.MainPage">
+
+    <NavigationPage Title="Test 1">
+        <x:Arguments>
+            <ContentPage Title="Test 1">
+                <VerticalStackLayout>
+                    <Button x:Name="btnOne" Text="Set Dynamic Page 1" Clicked="btnOne_Clicked" />
+                    <Button x:Name="btnTwo" Text="Set Dynamic Page 2" Clicked="btnTwo_Clicked" />
+                </VerticalStackLayout>
+            </ContentPage>
+        </x:Arguments>
+    </NavigationPage>
+
+    <NavigationPage Title="Test 2">
+        <x:Arguments>
+            <ContentPage Title="Test 2">
+                <Label Text="Test 2" />
+            </ContentPage>
+        </x:Arguments>
+    </NavigationPage>
+
+    <ContentPage Title="Test" IsVisible="False">
+        <Label Text="Place Holder" />
+    </ContentPage>
+    <!--
+    <TabbedPage Title="Test 3 (Tabs)">
+        <ContentPage Title="Tab 1">
+            <Label Text="Tab 1" />
+        </ContentPage>
+
+        <ContentPage Title="Tab 2">
+            <Label Text="Tab 2" />
+        </ContentPage>
+
+        <ContentPage Title="Tab 3">
+            <Label Text="Tab 3" />
+        </ContentPage>
+    </TabbedPage>
+    -->
+</TabbedPage>
